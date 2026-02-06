@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  router:
+    build: ..
+    ports:
+      - "3000:3000"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      CLASSIFIER_BASE_URL: http://host.docker.internal:8000
+      CLASSIFIER_MODEL: meta-llama/Meta-Llama-3.1-8B-Instruct
+      CHEAP_BASE_URL: http://host.docker.internal:8000
+      CHEAP_MODEL: meta-llama/Meta-Llama-3.1-8B-Instruct
+      FRONTIER_BASE_URL: https://openrouter.ai/api
+      FRONTIER_MODEL: anthropic/claude-3.5-sonnet
+      REDIS_URL: redis://redis:6379
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

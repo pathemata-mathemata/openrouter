@@ -1,0 +1,25 @@
+{
+  "name": "openrouter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Hardware-aware LLM routing proxy for OpenClaw",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "check-hw": "node scripts/check_hw.js",
+    "configure": "node scripts/configure_providers.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fastify": "^4.27.0",
+    "lru-cache": "^10.2.2",
+    "pino": "^9.4.0",
+    "redis": "^4.6.13"
+  }
+}
