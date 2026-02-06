@@ -237,6 +237,6 @@ This prints the recommended engine:
 - If listing fails, the wizard falls back to `scripts/cloud_model_catalog.json`.
 
 **Star History**
-Replace `https://github.com/pathemata-mathemata/openrouter` with your repo slug:
+
 
 [![Star History Chart](https://api.star-history.com/svg?repos=pathemata-mathemata/openrouter&type=Date)](https://star-history.com/#pathemata-mathemata/openrouter&Date)
