@@ -1,6 +1,6 @@
-# openrouter
+# Xrouter
 
-openrouter is an open-source inference router that sits between OpenClaw and your LLM providers. It uses a fast, hardware-aware classifier to route each request to the most cost-effective model that can handle the task.
+Xrouter is an open-source inference router that sits between OpenClaw and your LLM providers. It uses a fast, hardware-aware classifier to route each request to the most cost-effective model that can handle the task.
 
 This project is MIT licensed. See the [MIT License](LICENSE).
 
@@ -88,8 +88,8 @@ curl -i http://localhost:3000/v1/chat/completions \
 ```
 
 Look for these headers:
-- `x-openrouter-decision`: `0`, `1`, or `2`.
-- `x-openrouter-upstream`: `cheap`, `medium`, or `frontier`.
+- `X-Xrouter-decision`: `0`, `1`, or `2`.
+- `X-Xrouter-upstream`: `cheap`, `medium`, or `frontier`.
 
 Open the dashboard:
 - `http://localhost:3000/dashboard`
@@ -124,7 +124,7 @@ The wizard:
 
 **Compatibility**
 - The router accepts OpenAI-style requests and translates when needed.
-- Provider type can be explicit (`openrouter`, `openai_compatible`, `openai`, `anthropic`, `gemini`, `cohere`, `azure_openai`, `mistral`, `groq`, `together`, `perplexity`) or `auto`.
+- Provider type can be explicit (`xrouter`, `openai_compatible`, `openai`, `anthropic`, `gemini`, `cohere`, `azure_openai`, `mistral`, `groq`, `together`, `perplexity`) or `auto`.
 - `auto` infers the provider adapter from the base URL or API key.
 - Providers that expose OpenAI-compatible endpoints use the `openai_compatible` adapter.
 - Anthropic/Gemini/Cohere streaming is translated into OpenAI-style SSE chunks.
@@ -239,4 +239,4 @@ This prints the recommended engine:
 **Star History**
 
 
-[![Star History Chart](https://api.star-history.com/svg?repos=pathemata-mathemata/openrouter&type=Date)](https://star-history.com/#pathemata-mathemata/openrouter&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=pathemata-mathemata/xrouter&type=Date)](https://star-history.com/#pathemata-mathemata/xrouter&Date)

@@ -6,7 +6,7 @@ import { proxyAzureOpenAi } from "./azure_openai.js";
 
 const adapters = new Map([
   ["openai_compatible", proxyOpenAiCompatible],
-  ["openrouter", proxyOpenAiCompatible],
+  ["xrouter", proxyOpenAiCompatible],
   ["openai", proxyOpenAiCompatible],
   ["mistral", proxyOpenAiCompatible],
   ["groq", proxyOpenAiCompatible],
@@ -51,7 +51,7 @@ export function detectProvider(baseUrl, apiKey) {
     if (host.includes("api.groq.com")) return "groq";
     if (host.includes("api.together.xyz")) return "together";
     if (host.includes("api.perplexity.ai")) return "perplexity";
-    if (host.includes("openrouter.ai")) return "openrouter";
+    if (host.includes("xrouter.ai")) return "xrouter";
     if (host.includes("api.openai.com")) return "openai";
   }
 

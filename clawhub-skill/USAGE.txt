@@ -1,4 +1,4 @@
-OpenRouter Router - Usage Cheatsheet
+Xrouter Router - Usage Cheatsheet
 
 Install + configure
 - npm install
@@ -15,8 +15,8 @@ curl -i http://localhost:3000/v1/chat/completions \
   -d '{"model":"any","messages":[{"role":"user","content":"Fix this sentence: I has a apple."}]}'
 
 Inspect headers
-- x-openrouter-decision: 0, 1, or 2
-- x-openrouter-upstream: cheap | medium | frontier
+- X-Xrouter-decision: 0, 1, or 2
+- X-Xrouter-upstream: cheap | medium | frontier
 
 Health + usage
 - http://localhost:3000/health

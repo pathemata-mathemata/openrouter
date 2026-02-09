@@ -5,7 +5,7 @@ export async function fetchModelList({ provider, baseUrl, apiKey, headers, timeo
   switch (resolved) {
     case "openai":
     case "openai_compatible":
-    case "openrouter":
+    case "xrouter":
     case "mistral":
     case "groq":
     case "together":

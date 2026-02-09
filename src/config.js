@@ -159,8 +159,8 @@ export const config = {
   logLevel: env("LOG_LEVEL", "info"),
   logToFile: envBool("LOG_TO_FILE", true),
   logDir: env("LOG_DIR", "./logs"),
-  decisionHeader: env("DECISION_HEADER", "x-openrouter-decision"),
-  upstreamHeader: env("UPSTREAM_HEADER", "x-openrouter-upstream"),
+  decisionHeader: env("DECISION_HEADER", "X-Xrouter-decision"),
+  upstreamHeader: env("UPSTREAM_HEADER", "X-Xrouter-upstream"),
   classifier: {
     enabled: envBool("CLASSIFIER_ENABLED", true),
     baseUrl: env("CLASSIFIER_BASE_URL", null),
